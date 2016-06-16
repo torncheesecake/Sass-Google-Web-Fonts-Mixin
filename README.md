@@ -1,5 +1,5 @@
-# Sass-Google-Web-Fonts
-SCSS Mixin for autogenerating Google Web Fonts
+# SASS Google Web Fonts Mixin
+SCSS Mixin for autogenerating Google Web Fonts without any faff.
 
 Firstly add _google_webfont.scss to your assets/stylesheets folder or where-ever you store your SCSS files.
 

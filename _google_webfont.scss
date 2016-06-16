@@ -1,0 +1,20 @@
+// Google Web font mixin (use: @include webfont(Open Sans); ) add more using ,
+@mixin webfont($font-face...) {
+  $url: "https://fonts.googleapis.com/css?family=";
+  $font: 0;
+  @each $font-name in $font-face {
+    $font: $font + 1;
+    $font-word: 0;
+    @each $word in $font-name {
+      $font-word: $font-word + 1;
+      $url: $url + $word;
+      @if $font-word < length($font-name) {
+        $url: $url + "+";
+      }
+    }
+    @if $font < length($font-face) {
+      $url: $url + "|";
+    }
+  }
+  @import url(#{$url});
+}
